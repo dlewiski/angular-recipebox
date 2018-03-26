@@ -1,0 +1,16 @@
+<div *ngIf="recipe">
+
+  <h2>{{ recipe.title | uppercase }} Details</h2>
+  <div>
+    <label>Title:
+      <input [(ngModel)]="recipe.title" placeholder="name"/>
+    </label>
+    <label>Ingredients:
+      <input [(ngModel)]="recipe.ingredients" placeholder="name"/>
+    </label>
+    <label>Directions:
+      <input [(ngModel)]="recipe.direction" placeholder="name"/>
+    </label>
+  </div>
+
+</div>
