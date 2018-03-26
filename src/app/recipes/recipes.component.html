@@ -1,0 +1,21 @@
+<h2>YOUR RECIPEEEEEEEE(s)</h2>
+<ul class="recipes">
+  <li *ngFor="let recipe of recipes" (click)="onSelect(recipe)" [class.selected]="recipe === selectedRecipe">
+    <span class="badge">{{recipe.title}}</span>
+  </li>
+</ul>
+
+<div *ngIf="selectedRecipe">
+
+
+  <h2>{{ selectedRecipe.title | uppercase }} Details</h2>
+  <div>
+    <label>Title:
+      <input [(ngModel)]="selectedRecipe.title" placeholder="name">
+    </label>
+  </div>
+  <br>
+  <div><span>Ingredients: </span>{{selectedRecipe.ingredients}}</div>
+  <br>
+  <div><span>Directions: </span> {{selectedRecipe.direction}}</div>
+</div>
